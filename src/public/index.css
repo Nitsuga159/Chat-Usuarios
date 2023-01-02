@@ -19,6 +19,23 @@ main {
   text-align: center;
 }
 
+.links {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.links * {
+  height: 35px;
+  fill: white;
+}
+
+.links *:hover {
+  fill: rgb(152, 211, 238);
+}
+
 footer {
   text-align: center;
   color: white;
