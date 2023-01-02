@@ -25,6 +25,7 @@ main {
   position: absolute;
   top: 5px;
   left: 5px;
+  z-index: 999;
 }
 
 .links * {
@@ -40,6 +41,6 @@ footer {
   text-align: center;
   color: white;
   font-weight: bolder;
-  padding: 10px 0;
+  padding: 5px 0;
   background-color: rgb(10, 10, 21);
 }
