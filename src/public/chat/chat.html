@@ -1,0 +1,40 @@
+<head>
+  <link rel="stylesheet" href="styles/chat.css" />
+</head>
+<div class="messages-container">
+  <div class="conexions">
+    <p>
+      <strong>Conectados: <span id="conexions-active">-</span></strong>
+    </p>
+    <div class="green-circle"></div>
+  </div>
+  <div id="chat" class="messages"></div>
+  <form id="form-message" class="form-message">
+    <textarea
+      class="chat-input"
+      maxlength="255"
+      placeholder="Escribe un mensaje"
+      id="input-chat"
+    ></textarea>
+    <button
+      id="send-button"
+      class="submit-button-messages"
+      type="button"
+      disabled
+    >
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        class="send-icon"
+      >
+        <title>send</title>
+        <path
+          d="M4.667 26.307v-7.983l17.143-2.304-17.143-2.304v-7.983l24 10.285z"
+        ></path>
+      </svg>
+    </button>
+  </form>
+</div>

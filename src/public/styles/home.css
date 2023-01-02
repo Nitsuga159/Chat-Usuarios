@@ -1,0 +1,103 @@
+.title-welcome {
+  margin-bottom: 30px;
+  color: white;
+}
+
+.description-container {
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(119, 104, 180);
+}
+
+.description-welcome {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: white;
+}
+
+.home-form {
+  color: white;
+  margin-top: 20px;
+  display: flex;
+}
+
+.label-username {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.input-username,
+.input-username:focus,
+.submit-button {
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+}
+
+.input-username,
+.input-username::placeholder {
+  color: white;
+  padding: 5px;
+  font-size: 0.9rem;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+}
+
+.input-username::placeholder {
+  color: rgba(255, 255, 255, 0.796);
+}
+
+.submit-button {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(146, 87, 240);
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: white;
+  color: rgb(40, 40, 40);
+}
+
+@media (max-width: 550px) {
+  .title-welcome {
+    font-size: 1.5rem;
+    margin-top: 30px;
+  }
+
+  .description-welcome {
+    font-size: 1rem;
+  }
+
+  .home-form {
+    flex-direction: column;
+  }
+
+  .home-form * {
+    margin: 15px 0;
+  }
+
+  .label-username {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 0.8rem;
+  }
+
+  .input-username,
+  .input-username::placeholder {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .submit-button {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 7px;
+  }
+}

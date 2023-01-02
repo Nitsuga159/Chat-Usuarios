@@ -1,0 +1,33 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="styles/home.css" />
+</head>
+<h1 class="title-welcome">Bienvenido al Chat de Usuarios</h1>
+<div class="description-container">
+  <p class="description-welcome">
+    <strong>Descripción:</strong> Este es un chat de usuarios en tiempo real. En
+    cuanto ingrese un nombre de usuario y presione el botón de comenzar podrá
+    charlar con otros usuarios conectados.
+  </p>
+  <p class="description-welcome">
+    <strong>Aclaraciones: </strong>
+    Mientras halla al menos un usuario conectado, el chat se mantendrá vigente
+    con todos sus mensajes cargados, pero en cuanto se desconecte este último,
+    el chat se reiniciará.
+  </p>
+</div>
+<form id="form-username" class="home-form">
+  <label for="username" class="label-username"
+    >Escribí un username con al menos cuatro letras:
+  </label>
+  <input
+    class="input-username"
+    type="text"
+    pattern="^[a-zA-Z]{4}.*"
+    maxlength="30"
+    name="username"
+    id="username"
+    placeholder="Escribe aquí..."
+    required
+  />
+  <input class="submit-button" type="submit" value="comenzar" />
+</form>

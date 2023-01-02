@@ -1,0 +1,28 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: rgb(23, 23, 46);
+}
+
+main {
+  min-height: calc(100vh - 42px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  padding: 10px 0;
+  background-color: rgb(10, 10, 21);
+}
