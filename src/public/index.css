@@ -11,7 +11,7 @@ body {
 }
 
 main {
-  min-height: calc(100vh - 42px);
+  min-height: calc(100vh - 32px);
   display: flex;
   flex-direction: column;
   justify-content: center;
