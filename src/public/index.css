@@ -44,3 +44,14 @@ footer {
   padding: 5px 0;
   background-color: rgb(10, 10, 21);
 }
+
+@media (max-width: 550px) {
+  .links * {
+    height: 25px;
+    fill: white;
+  }
+
+  .links {
+    bottom: 2px;
+  }
+}
