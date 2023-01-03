@@ -8,6 +8,7 @@
 body {
   font-family: "Noto Sans", sans-serif;
   background-color: rgb(23, 23, 46);
+  min-height: calc(100vh - 40px);
 }
 
 main {
@@ -17,16 +18,14 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 .links {
-  position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   align-items: center;
-  z-index: 999;
+  height: 30px;
 }
 
 .links * {
@@ -47,6 +46,8 @@ footer {
   color: white;
   font-weight: bolder;
   padding: 5px 0;
+  background-color: rgb(23, 23, 46);
+  z-index: 999999;
 }
 
 @media (max-width: 550px) {
