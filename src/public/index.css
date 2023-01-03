@@ -17,6 +17,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .links {
@@ -35,7 +36,7 @@ main {
 }
 
 footer {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   left: 0;
   height: 30px;
