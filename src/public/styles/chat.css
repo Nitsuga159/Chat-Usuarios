@@ -130,12 +130,12 @@
 }
 
 .username-message {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-bottom: 5px;
 }
 
 .message-text {
-  font-size: 1.2rem;
+  font-size: 1rem;
   word-wrap: break-word;
 }
 
@@ -191,23 +191,26 @@
   opacity: 0;
 }
 
-@media (max-height: 750px) {
-  .messages-container {
-    height: 420px;
-  }
-}
-
 @media (max-width: 550px) {
+  .messages-container {
+    width: calc(100% - 30px);
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
   .chat-input {
     font-size: 0.7rem;
   }
 
   .username-message {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
+    margin-bottom: 2px;
   }
 
   .message-text {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 
   .date-message {
@@ -217,4 +220,46 @@
   .conexions {
     font-size: 0.8rem;
   }
+
+  .my-message-container,
+  .message-container {
+    margin: 5px;
+  }
+}
+
+/* STYLES MESSAGES */
+
+.party-animation {
+  animation: party 2s ease infinite;
+}
+
+@keyframes party {
+  10% {
+    color: aqua;
+  }
+
+  30% {
+    color: rgb(118, 254, 55);
+  }
+
+  50% {
+    color: rgb(255, 214, 29);
+  }
+
+  70% {
+    color: rgb(226, 46, 46);
+  }
+
+  85% {
+    color: rgb(213, 143, 254);
+  }
+
+  100% {
+    color: white;
+  }
+}
+
+.image-message {
+  max-width: 100%;
+  height: auto;
 }

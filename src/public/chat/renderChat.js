@@ -1,4 +1,5 @@
 import AJAX from "../helpers/AJAX.js";
+import textTemplate from "./textTemplate.js";
 
 export default (username, main) => {
   AJAX({
@@ -34,13 +35,14 @@ function handleSocketIO(username) {
 
   let socketId = "";
   let setTimeOutIo = null;
+  let currentInputChat = "";
 
   const sendFormMessage = () => {
-    const message =
-      inputChat.value.at(-1) === "\n"
-        ? inputChat.value.slice(0, -1)
-        : inputChat.value;
+    if (!currentInputChat) return;
+
+    const message = currentInputChat;
     inputChat.value = "";
+    currentInputChat = "";
 
     if (!message || /^\s+$/.test(message)) return;
 
@@ -72,6 +74,8 @@ function handleSocketIO(username) {
 
     clearTimeout(setTimeOutIo);
 
+    currentInputChat = value;
+
     io.emit("chat:typing", { username, socketId });
 
     setTimeOutIo = setTimeout(() => {
@@ -87,9 +91,7 @@ function handleSocketIO(username) {
   });
 
   io.on("chat:get-one-message", (data) => {
-    chat.innerHTML +=
-      `<p id="typing" class="is-typing hidden"></p>` +
-      templateMessage(data, socketId);
+    chat.innerHTML += templateMessage(data, socketId);
   });
 
   io.on("chat:get-all-messages", (messages) => {
@@ -127,15 +129,7 @@ function templateMessage(data, socketId) {
           ? "my-message-container"
           : "message-container"
       }`}">
-        <p class="message-text">${data.message
-          .replace("\n", "<br />")
-          .replace(":mate", "👻")
-          .replace(":nico", "🍋")
-          .replace(":juli", "🐥")
-          .replace(":david", "🐀")
-          .replace(":tomi", "🍅")
-          .replace(":rome", "🤡")
-          .replace(":mati", "🗿")}</p>
+        <p class="message-text">${textTemplate(data.message)}</p>
         <span class="date-message">${data.createdAt}</span>
       </div>
     </div>
