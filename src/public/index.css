@@ -12,14 +12,12 @@ body {
 }
 
 main {
-  height: calc(100vh - 40px);
+  min-height: calc(100vh - 40px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 30px;
 }
 
 .links {
