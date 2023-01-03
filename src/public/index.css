@@ -47,7 +47,6 @@ footer {
   color: white;
   font-weight: bolder;
   padding: 5px 0;
-  background-color: rgb(10, 10, 21);
 }
 
 @media (max-width: 550px) {
