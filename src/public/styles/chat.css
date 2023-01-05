@@ -194,7 +194,7 @@
 @media (max-width: 550px) {
   .messages-container {
     width: calc(100% - 30px);
-    height: calc(100vh - 30px);
+    height: calc(100vh - 95px);
     border: none;
     border-radius: 0;
     box-shadow: none;
